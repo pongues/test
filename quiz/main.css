@@ -1,0 +1,14 @@
+.title {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.correct {
+	font-size: 1.5rem;
+	color: red;
+}
+
+.incorrect {
+	font-size: 1.5rem;
+	color: blue;
+}
