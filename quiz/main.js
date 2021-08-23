@@ -3,8 +3,14 @@ const questions = [
 	{ buttonId: "button2", inputId: "input2", outputId: "output2", submitted: false, type: "text", answer: "ぽん" },
 ];
 
-const output = document.getElementById("output");
 let point = 0;
+const pointOutputTag = document.getElementById("output");
+
+function show_point(){
+	pointOutputTag.innerText = point + "点";
+}
+
+show_point();
 
 for(const q of questions){
 	const button = document.getElementById(q.buttonId);
@@ -16,7 +22,7 @@ for(const q of questions){
 			if(value == q.answer){
 				outputTag.innerHTML = "<font class='correct'>正解</font><br/><font>君は偉い</font>"
 				point++;
-				output.innerText = point + "点";
+				show_point();
 			}else{
 				outputTag.innerHTML = "<font class='incorrect'>不正解</font><br/><font>正解は「" + q.answer + "」</font>"
 			}
