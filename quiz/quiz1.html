@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>クイズ2</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+	<div id="quizlist"></div>
+	<button id="button">判定</button>
+	<script type="text/javascript">
+const quizzes = [
+	{
+		title: "わしの血液型は？",
+		type: "select",
+		options: [ "A", "B", "AB", "O" ],
+		answer: "A"
+	}, {
+		title: "わしの名前は？",
+		type: "text",
+		answer: "ぽんゲス"
+	}
+];
+	</script>
+	<script type="text/javascript" src="quiz.js"></script>
+</body>
+</html>
