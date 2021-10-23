@@ -4,7 +4,6 @@ const $inputs = new Array();
 const $answers = new Array();
 
 for(const quiz of quizzes){
-	console.log(quiz);
 	const $div = document.createElement("div");
 
 	const $title = document.createElement("div");
@@ -39,13 +38,14 @@ for(const quiz of quizzes){
 	$list.appendChild($div);
 }
 
-const $button = document.getElementById("button");
+const $button = document.getElementById("quizbutton");
 $button.addEventListener("click", function(e){
 	for(let i=0, l=quizzes.length; i<l; i++){
 		const quiz = quizzes[i];
 		const $input = $inputs[i];
 		const $answer = $answers[i];
 
+		while($answer.lastChild) $answer.removeChild($answer.lastChild);
 		if($input.value === quiz.answer){
 			$answer.appendChild(document.createTextNode("正解"));
 			$answer.setAttribute("class", "correct");
