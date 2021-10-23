@@ -1,14 +1,18 @@
+body {
+	word-break: break-all;
+}
+
 .title {
-	font-size: 1.8rem;
+	font-size: 1.3rem;
 	font-weight: 600;
 }
 
 .correct {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	color: red;
 }
 
 .incorrect {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	color: blue;
 }
